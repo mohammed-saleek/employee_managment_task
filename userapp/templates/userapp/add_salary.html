@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Salary</title>
+</head>
+<body>
+    <center><h1>Add Salary</h1></center>
+    <p>Employee Name : {{employee.employee_name}}</p>
+    <p>Employee Code : {{employee.employee_code}}</p>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="col-md-6 mb-3">
+          <label for="salary">Salary : </label>
+          <input type="text" class="form-control" id="salary" name="salary" placeholder="" value="" required="">
+          <div class="invalid-feedback">
+          </div>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

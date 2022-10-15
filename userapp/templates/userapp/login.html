@@ -1,0 +1,14 @@
+<center><h3 class="display-4">Welcome Back!!!</h3></center>
+        <p><em>Enter Your Credentials</em></p>
+        <center>
+        <div class="container py-5">
+            <!-- Create a Form -->
+            <form action="{% url 'user_login' %}" method="POST">
+                <!-- Security token by Django -->
+                {% csrf_token %}
+                {{ login_form }} 
+                <br>
+                <button class="btn btn-primary" type="submit" value="Login">Login</button>
+            </form>
+        </div>
+        </center>

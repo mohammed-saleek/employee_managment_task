@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>
+            Employee View Page
+        </title>
+    </head>
+    <body>
+        <center>
+            <h3>Employee Details</h3>
+            <p>Employee Code : {{employee.employee_code}}</p>
+            <p>Employee Name : {{employee.employee_name}}</p>
+            <p>Employee Designation : {{employee.designation}}</p>
+            <p>Employee Salary : {{employee.salary}}</p>
+            <a class="btn" href="{% url 'employee_listing' %}">Back</a>
+        </center>
+    </body>
+</html>

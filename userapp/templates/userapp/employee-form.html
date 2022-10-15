@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            Employee Registration
+        </title>
+        <style>
+            table {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+          <tbody>
+           <tr class="table_row">
+            <form method="POST">
+                {% csrf_token %}
+              {% for field in form %}
+                <td>
+                 <table>
+                  <tr><td>{{ field.label }}</td></tr>
+                  <tr><td>{{ field }}</td></tr>
+                 </table>
+                </td>
+              {% endfor %}
+              <input type="submit" value="Submit">
+             </form>
+             <a class="btn" href="{% url 'employee_listing' %}">Home</a>
+            </tr>
+           </tbody>
+           <!-- Alert Popup message -->
+        {% if messages %}
+        {% for message in messages %}
+            {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+        {% endfor %}
+    {% endif %}
+    </body>
+</html>
